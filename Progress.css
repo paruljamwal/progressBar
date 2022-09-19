@@ -65,7 +65,20 @@ body{
 .container .card .percent svg circle:nth-child(2){
    stroke: var(--clr);
    stroke-dasharray: 440;
-   stroke-dashoffset: calc(440-(440*var(--num))/100);
+   stroke-dashoffset:800;
+   opacity: 0;
+   animation: fadeIn 1s linear forwards;
+   animation-delay: 2.5s;
+
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 
@@ -105,4 +118,37 @@ body{
 .number{
     position:absolute;
     inset:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.number h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 2.5em;
+    font-weight: 700;
+    opacity: 0;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 2.5s;
+}
+
+
+.number h2 span{
+    font-weight: 300;
+    color: white;
+    font-size: 0.5em;
+    
+} 
+
+
+.number p{
+    font-weight: 300;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    color: rgb(92, 92, 92);
+    margin-top: 5px;
 }
